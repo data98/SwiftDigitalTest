@@ -1,0 +1,17 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+
+bool isPalindrome(string text){
+	string temp=text;
+	reverse(temp.begin(),temp.end());
+	if(text==temp) return true;
+	else return false;
+}
+
+int main(){
+	string text="RADAR";
+	cout<<isPalindrome(text);
+	return 0;
+}

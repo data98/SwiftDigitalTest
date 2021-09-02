@@ -1,0 +1,35 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int minSplit(int amount){
+    int count=0;
+    if(amount>=50){
+        count+=amount/50;
+        amount%=50;
+    }
+    if(amount>=20){
+        count+=amount/20;
+        amount%=20;
+    }
+    if(amount>=10){
+        count+=amount/10;
+        amount%=10;
+    }
+    if(amount>=5){
+        count+=amount/5;
+        amount%=5;
+    }
+    if(amount>=1){
+        count+=amount/1;
+        amount%=1;
+    }
+    return count;
+}
+
+int main(){
+    int amount = 122; //5
+	cout<<minSplit(amount);
+	return 0;
+}
